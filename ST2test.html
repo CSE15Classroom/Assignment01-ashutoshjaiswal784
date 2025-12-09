@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: red;
+        }
+        main{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: auto;
+            
+        }
+         .container {
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: aqua;
+        }
+        
+        .card {
+            width: 250px;
+            background: yellow;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+        @media (max-width: 1024px) {
+        .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        }
+        }
+        @media (max-width: 600px) {
+        .grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        }
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="container">
+        <div class="card">
+            
+            <h3>Shoes</h3>
+            <p>Very costly product.</p>
+            <p class="price">₹5000</p>
+            
+
+        </div>
+        <div class="card">
+            <h3>PUMA SHIRT</h3>
+            <p>very comfortable product.</p>
+            <p class="price">₹2099</p>
+            </div>
+        <div class="card">
+            <h3>Notebook</h3>
+            <p>Math notebook</p>
+            <p class="price">₹120</p>
+
+        </div>
+        <div class="card">
+            <h3>Sweet</h3>
+            <p>very sweety & tasty</p>
+            <p class="price">₹800/kg</p>
+             
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
